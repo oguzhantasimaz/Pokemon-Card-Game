@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0">
+            <image>
+                <Image url="@images/background.jpg" />
+            </image>
+        </ImageView>
+        <Line endX="692.0" layoutX="108.0" layoutY="445.0" startX="-108.0" />
+        <Line endX="692.0" layoutX="108.0" layoutY="164.0" startX="-108.0" />
+        <Pane layoutX="660.0" layoutY="197.0" prefHeight="32.0" prefWidth="32.0" style="-fx-background-radius: 20px; -fx-background-color: #283c63;">
+            <children>
+                <Label fx:id="cardsLeft" layoutX="11.0" layoutY="1.0" prefHeight="27.0" prefWidth="19.0" text="10" textFill="#fbe8d3">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Label fx:id="secondPlayer" layoutX="14.0" layoutY="14.0" text="AI">
+            <font>
+                <Font name="Avenir Next Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="firstPlayer" layoutX="14.0" layoutY="549.0" text="PLAYER">
+            <font>
+                <Font name="Avenir Next Bold" size="19.0" />
+            </font>
+        </Label>
+        <Pane layoutX="10.0" layoutY="42.0" prefHeight="39.0" prefWidth="50.0" style="-fx-background-color: fff4e1; -fx-background-radius: 10px;">
+            <children>
+                <Label fx:id="AIscore" layoutX="4.0" layoutY="2.0" prefHeight="36.0" prefWidth="39.0" text="0" textAlignment="CENTER">
+                    <font>
+                        <Font name="Avenir Next Bold" size="25.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="10.0" layoutY="507.0" prefHeight="39.0" prefWidth="57.0" style="-fx-background-color: e84a5f; -fx-background-radius: 10px;">
+            <children>
+                <Label fx:id="playerScore" layoutX="1.0" layoutY="2.0" prefHeight="36.0" prefWidth="50.0" text="0" textAlignment="CENTER">
+                    <font>
+                        <Font name="Avenir Next Bold" size="25.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane fx:id="menuBtn" layoutX="744.0" layoutY="5.0" onMousePressed="#opensettings" prefHeight="50.0" prefWidth="50.0">
+            <children>
+                <Line endX="100.0" layoutX="-63.0" layoutY="34.0" startX="75.0" strokeWidth="3.0" />
+                <Line endX="100.0" layoutX="-63.0" layoutY="23.0" startX="75.0" strokeWidth="3.0" />
+                <Line endX="100.0" layoutX="-63.0" layoutY="13.0" startX="75.0" strokeWidth="3.0" />
+            </children>
+        </Pane>
+        <Pane fx:id="settingsbar" layoutX="685.0" layoutY="60.0" onMouseExited="#closesettings" prefHeight="98.0" prefWidth="97.0" style="-fx-background-color: fff4e1; -fx-background-radius: 10;" visible="false">
+            <children>
+                <JFXButton fx:id="RestartButton" layoutX="6.0" layoutY="12.0" onAction="#Restart" prefHeight="32.0" prefWidth="86.0" style="-fx-background-color: fff4e1;" text="Restart">
+                    <font>
+                        <Font name="Avenir Next Regular" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton layoutX="6.0" layoutY="54.0" onAction="#Quit" prefHeight="33.0" prefWidth="86.0" style="-fx-background-color: fff4e1;" text="Quit">
+                    <font>
+                        <Font name="Avenir Next Regular" size="15.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </Pane>
+      <JFXButton fx:id="Shuffle" layoutX="707.0" layoutY="369.0" onMouseClicked="#shuffleClick" prefHeight="39.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 10px;" text="Shuffle" textFill="WHITE">
+         <font>
+            <Font name="Gadugi" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="BulbasaurImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="219.0" onMouseClicked="#BulbasaurClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/bulbasaur.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ButterfreeImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="218.0" onMouseClicked="#ButterfreeClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/butterfree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="CharmanderImg" fitHeight="150.0" fitWidth="200.0" layoutX="686.0" layoutY="218.0" onMouseClicked="#CharmanderClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/charmander.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="JigglypuffImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="218.0" onMouseClicked="#JigglypuffClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/jigglypuff.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="MeowthImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="219.0" onMouseClicked="#MeowthClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/meowth.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="PikachuImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="218.0" onMouseClicked="#PikachuClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pikachu.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="PsyduckImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="218.0" onMouseClicked="#PsyduckClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/psyduck.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SnorlaxImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="218.0" onMouseClicked="#SnorlaxClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/snorlax.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SquirtleImg" fitHeight="150.0" fitWidth="200.0" layoutX="692.0" layoutY="218.0" onMouseClicked="#SquirtleClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/squirtle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ZubatImg" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="218.0" onMouseClicked="#ZubatClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/zubat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="685.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/facedowncard.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="nextTour" layoutX="703.0" layoutY="178.0" onMouseClicked="#nextTourClick" prefHeight="39.0" prefWidth="86.0" style="-fx-background-color: black; -fx-background-radius: 10px;" text="Next Tour" textFill="WHITE">
+         <font>
+            <Font name="Gadugi" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="winScreen" fitHeight="607.0" fitWidth="966.0" layoutX="-45.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/winWallpaper.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="loseScreen" fitHeight="607.0" fitWidth="966.0" layoutX="-45.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/loseWallpaper.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ai1Wins" fitHeight="607.0" fitWidth="966.0" layoutX="-45.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/Ai1Wins.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ai2Wins" fitHeight="607.0" fitWidth="966.0" layoutX="-45.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/Ai2Wins.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="drawScreen" fitHeight="607.0" fitWidth="966.0" layoutX="-41.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/draw.png" />
+         </image>
+      </ImageView>
+        <Pane fx:id="StartPane" layoutY="-3.0" prefHeight="607.0" prefWidth="800.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="614.0" fitWidth="408.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/mainMenuBackground.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="484.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/pokeball.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="525.0" layoutY="199.0" text="POKEMON">
+                    <font>
+                        <Font name="Avenir Next Bold" size="20.0" />
+                    </font>
+                </Label>
+                <JFXButton layoutX="538.0" layoutY="408.0" onAction="#startgame" text="PLAY">
+                    <font>
+                        <Font name="Avenir Next Bold" size="20.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="QuitButton" layoutX="538.0" layoutY="481.0" onAction="#Quit" text="QUIT">
+                    <font>
+                        <Font name="Avenir Next Bold" size="20.0" />
+                    </font>
+                </JFXButton>
+                <Label layoutX="525.0" layoutY="289.0" text="GAME MODE">
+                    <font>
+                        <Font name="Avenir Next Bold" size="17.0" />
+                    </font>
+                </Label>
+            <CheckBox fx:id="aiCheckBox" layoutX="533.0" layoutY="327.0" mnemonicParsing="false" text="Ai to Ai">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="userCheckBox" layoutX="533.0" layoutY="363.0" mnemonicParsing="false" text="Ai to User">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </CheckBox>
+            </children>
+        </Pane>
+    </children>
+</Pane>
